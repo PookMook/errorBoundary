@@ -25,7 +25,13 @@ const BrokenButton = () => {
       >
         {`Throw nasty error`}
       </button>
-      <button onClick={() => window.call.crash()}>throw a tiny error</button>
+      <button
+        onClick={() => {
+          throw new Error("Hello Error");
+        }}
+      >
+        throw a tiny error
+      </button>
     </>
   );
 };
