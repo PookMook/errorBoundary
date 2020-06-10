@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import useError from '~/hooks/useError'
+
 
 const BrokenComponent = () => {
   throw new Error("I'm broken! Don't render me.");
@@ -9,6 +11,7 @@ const BrokenButton = () => {
     shouldRenderBrokenComponent,
     setShouldRenderBrokenComponent,
   ] = useState(false);
+  const throwError = useError();
 
   if (shouldRenderBrokenComponent) {
     return <BrokenComponent />;
@@ -26,7 +29,7 @@ const BrokenButton = () => {
       </button>
       <button
         onClick={() => {
-          throw new Error("Hello Error");
+          throwError(new Error("Hello Error"));
         }}
       >
         throw a tiny error

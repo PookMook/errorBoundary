@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/PookMook/errorBoundary#readme",
   "dependencies": {
-    "next": "~9.3.0",
+    "next": "^9.4.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },

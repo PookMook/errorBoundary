@@ -1,20 +1,22 @@
 import React from "react";
+import Router from "next/router";
 
-export const ErrorMessage: React.FC<{ onReset: () => void }> = ({
-  onReset,
+export const ErrorMessage: React.FC<{ error: Error | null }> = ({
+  error,
 }) => {
   return (
     <div>
       <h2>{`Sorry there was an unexpected error`}</h2>
       {`To continue: `}
-      <a
-        href="/"
+      <button
+      type="button"
         onClick={() => {
-          onReset();
+          Router.reload();
         }}
       >
-        {`go to home page`}
-      </a>
+        {`refresh`}
+      </button>
+      <p>{error.toString()}</p>
     </div>
   );
 };

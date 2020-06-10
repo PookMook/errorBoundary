@@ -36,7 +36,7 @@ export const withErrorBoundary = <BaseProps extends {}>(
       const { error } = this.state;
 
       if (error) {
-        return <BaseComponent {...(restProps as BaseProps)} />;
+        return <BaseComponent {...(restProps as BaseProps)} error={error}/>;
       }
 
       return children;
