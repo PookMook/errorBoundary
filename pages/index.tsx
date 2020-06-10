@@ -29,11 +29,15 @@ const BrokenButton = () => {
       </button>
       <button
         onClick={() => {
-          throwError(new Error("Hello Error"));
+          throwError(new Error("Hello guarded Error"));
         }}
       >
-        throw a tiny error
+        throw an error in event handler
       </button>
+      <button onClick={() => {
+          throw new Error("Hello event Error");
+        }}></button>
+
     </>
   );
 };
