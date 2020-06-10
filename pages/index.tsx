@@ -36,7 +36,7 @@ const BrokenButton = () => {
       </button>
       <button onClick={() => {
           throw new Error("Hello event Error");
-        }}></button>
+        }}>throw tiny error</button>
 
     </>
   );
