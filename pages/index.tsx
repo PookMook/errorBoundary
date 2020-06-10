@@ -16,7 +16,6 @@ const BrokenButton = () => {
 
   return (
     <>
-      {" "}
       <button
         type="button"
         onClick={() => {
